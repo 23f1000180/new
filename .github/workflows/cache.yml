@@ -20,5 +20,8 @@ jobs:
           path: ~/.npm
           key: cache-53bab6b
 
+      - name: Install dependencies
+        run: npm install
+
       - name: prime-cache-53bab6b
         run: "echo Cache result: ${{ steps.cache-step.outputs.cache-hit }}"
